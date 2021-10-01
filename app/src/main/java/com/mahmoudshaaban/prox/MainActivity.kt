@@ -17,12 +17,18 @@ class MainActivity : ComponentActivity() {
             ProxTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
+                    val timestamp = TIMESTAMP
                 }
             }
+
         }
     }
+
+    companion object {
+        const val TIMESTAMP = 123L
+    }
 }
+
 
 @Composable
 fun Greeting(name: String) {
